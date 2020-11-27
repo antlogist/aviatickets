@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Avia Tickets</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">AviaTickets</a>
+
+            <form name="currecny">
+                <select class="form-control" id="currencySelect">
+                    <option>USD</option>
+                    <option>EUR</option>
+                </select>
+            </form>
+        </nav>
+        <div class="container py-5">
+            <form name="locationControls">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="origin">Origin</label>
+                        <input
+                            type="text"
+                            class="form-control auto-complete"
+                            id="originInput"
+                            required
+                        />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="destination">Destination</label>
+                        <input
+                            type="text"
+                            class="form-control auto-complete"
+                            id="destinationInput"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-center">Depart Date</h5>
+                        <div class="datepicker" id="datePickerDepart"></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5 class="text-center">Return Date</h5>
+                        <div class="datepicker" id="datePickerReturn"></div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="container container-tickets">
+            <div class="row">
+                <div class="col-md-6 tickets-col">
+                    <h5 class="text-center text-uppercase pb-3">Tickets</h5>
+                    <div class="tickets-wrapper"></div>
+                </div>
+                <div class="col-md-6 tickets-fav">
+                   <h5 class="text-center text-uppercase pb-3">Favourite</h5>
+                    <div class="fav-wrapper">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
